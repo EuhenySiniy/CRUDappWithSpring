@@ -17,7 +17,7 @@ CREATE TABLE lesson (
     created_date BIGINT NOT NULL,
     name VARCHAR(255) NOT NULL,
     content VARCHAR(255) NOT NULL,
-    comment_id INT FOREIGHT KEY REFERENCES comment(id)
+    comment_id INT FOREIGN KEY REFERENCES comment(id)
 );
 
 CREATE TABLE course (
@@ -25,7 +25,7 @@ CREATE TABLE course (
     created_date BIGINT NOT NULL,
     name VARCHAR(255) NOT NULL,
     cost INT NOT NULL,
-    section_id INT FOREIGHT KEY REFERENCES section(id)
+    section_id INT FOREIGN KEY REFERENCES section(id)
 );
 
 CREATE TABLE comment (

@@ -1,0 +1,36 @@
+CREATE TABLE user (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    login VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    age INT NOT NULL,
+    role VARCHAR(255)
+);
+
+CREATE TABLE section (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    created_date BIGINT NOT NULL,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE lesson (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    created_date BIGINT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    content VARCHAR(255) NOT NULL,
+    comment_id INT FOREIGHT KEY REFERENCES comment(id)
+);
+
+CREATE TABLE course (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    created_date BIGINT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    cost INT NOT NULL,
+    section_id INT FOREIGHT KEY REFERENCES section(id)
+);
+
+CREATE TABLE comment (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    created_date BIGINT NOT NULL,
+    content VARCHAR(255) NOT NULL,
+    author_id INT
+);

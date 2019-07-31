@@ -1,6 +1,6 @@
 package com.yevhensynii.listener;
 
-import com.yevhensynii.model.CreatableEntity;
+import com.yevhensynii.model.parent.CreatableEntity;
 
 import javax.persistence.PrePersist;
 import java.util.Date;

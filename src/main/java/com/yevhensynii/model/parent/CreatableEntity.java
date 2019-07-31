@@ -1,6 +1,7 @@
-package com.yevhensynii.model;
+package com.yevhensynii.model.parent;
 
 import com.yevhensynii.listener.CreatableEntityListener;
+import com.yevhensynii.model.parent.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 

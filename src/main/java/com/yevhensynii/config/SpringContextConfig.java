@@ -1,5 +1,6 @@
 package com.yevhensynii.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -43,6 +44,7 @@ public class SpringContextConfig extends WebSecurityConfigurerAdapter {
         return new DelegatingPasswordEncoder("bcrypt", encoders);
     }
 
+    @Autowired
     public void configAuthUsers(AuthenticationManagerBuilder builder) throws Exception {
         builder.inMemoryAuthentication()
                 .withUser("user").password("{noop}password").roles("USER")

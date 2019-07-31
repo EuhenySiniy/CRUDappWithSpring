@@ -1,4 +1,4 @@
-package com.yevhensynii.model;
+package com.yevhensynii.model.parent;
 
 import lombok.Getter;
 import lombok.Setter;

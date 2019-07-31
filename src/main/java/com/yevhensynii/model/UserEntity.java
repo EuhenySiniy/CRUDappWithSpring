@@ -1,5 +1,6 @@
 package com.yevhensynii.model;
 
+import com.yevhensynii.model.parent.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

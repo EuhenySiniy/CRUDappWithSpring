@@ -25,7 +25,7 @@ public class SpringContextConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("login")
+                .loginPage("/login")
                 .permitAll()
                 .successForwardUrl("/home")
                 .and()

@@ -1,4 +1,4 @@
-package com.yevhensynii.model;
+package com.yevhensynii.model.enums;
 
 public enum UserRole {
     USER,

@@ -1,5 +1,6 @@
 package com.yevhensynii.model;
 
+import com.yevhensynii.model.enums.UserRole;
 import com.yevhensynii.model.parent.BaseEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

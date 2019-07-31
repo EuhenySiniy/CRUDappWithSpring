@@ -8,6 +8,7 @@ import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -22,5 +23,6 @@ public class SectionEntity extends CreatableEntity {
     private String name;
 
     @ManyToOne
+    @JoinColumn(name = "course_id")
     private CourseEntity courseEntity;
 }

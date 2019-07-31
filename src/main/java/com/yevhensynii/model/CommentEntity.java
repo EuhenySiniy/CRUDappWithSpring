@@ -8,6 +8,7 @@ import lombok.experimental.Accessors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -25,5 +26,6 @@ public class CommentEntity extends CreatableEntity {
     private long authorId;
 
     @ManyToOne
+    @JoinColumn(name = "lesson_id")
     private LessonEntity lessonEntity;
 }
